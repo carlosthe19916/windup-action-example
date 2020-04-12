@@ -16,6 +16,11 @@ jobs:
         with:
           name: rhamt-report
           path: ${{ steps.rhamt.outputs.report }}
+  gp_page_job:
+    runs-on: ubuntu-latest
+    name: Github Pages
+    needs: windup_job
+    steps:
       - name: Download RHAMT Report
         uses: actions/download-artifact@v1
         with:
@@ -25,10 +30,9 @@ jobs:
         shell: bash
         run: tar -xzvf rhamt-report.tgz -C build
       - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v1.3.0
+        uses: crazy-max/ghaction-github-pages@v1.4.0
         with:
           build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 

@@ -1,4 +1,4 @@
-# windup-github-action-example
+# windup-action-example
 
 ## Source Code
 This is an application made to be deployed in a **WebLogic**.

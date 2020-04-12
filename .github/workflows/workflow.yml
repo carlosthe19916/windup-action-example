@@ -23,11 +23,12 @@ jobs:
           path: .
       - name: Extract RHAMT Report
         shell: bash
-        run: tar -xzvf rhamt-report.tgz -C ~
+        run: tar -xzvf rhamt-report.tgz -C build
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
         with:
           build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 

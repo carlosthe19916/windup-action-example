@@ -7,3 +7,4 @@ The source code was taken from https://github.com/windup/windup-sample-apps/tree
 
 ## How to see the results of RHAMT Analysis
 This example is also using GitHub Web Pages for deploying the results of the analysis.
+

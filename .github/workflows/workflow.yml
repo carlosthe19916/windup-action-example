@@ -29,7 +29,7 @@ jobs:
           path: .
       - shell: bash
         run: |
-          mkdir target/rhamt
+          mkdir -p target/rhamt
       - shell: bash
         run: |
           ls -l

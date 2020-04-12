@@ -29,17 +29,20 @@ jobs:
           path: .
       - shell: bash
         run: |
-          mkdir build
+          mkdir target/rhamt
       - shell: bash
         run: |
           ls -l
       - name: Extract RHAMT Report
         shell: bash
         run: tar -xzvf rhamt-report.tgz -C build #rhamt-report.tgz file name is defined from the GH Action and you can not change it
+      - shell: bash
+        run: |
+          ls -l target/rhamt
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.4.0
         with:
-          build_dir: build
+          build_dir: target/rhamt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

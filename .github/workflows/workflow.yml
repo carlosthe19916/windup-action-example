@@ -6,10 +6,11 @@ jobs:
     name: RHAMT
     steps:
       - uses: actions/checkout@v2
-      - uses: carlosthe19916/windup-action@v3
+      - uses: carlosthe19916/windup-action@master
         id: rhamt
         with:
           target: 'eap7'
+          additionalCommandLineArguments: '--sourceMode'
       - name: Upload report
         uses: actions/upload-artifact@v1
         with:

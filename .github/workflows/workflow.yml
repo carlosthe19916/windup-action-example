@@ -11,9 +11,23 @@ jobs:
         with:
           target: 'eap7'
           additional-command-line-arguments: '--sourceMode'
-      - name: Upload report
+      - name: Upload RHAMT report
         uses: actions/upload-artifact@v1
         with:
-          name: ${{ steps.rhamt.outputs.report }}
+          name: rhamt-report
           path: ${{ steps.rhamt.outputs.report }}
+      - name: Download RHAMT Report
+        uses: actions/download-artifact@v1
+        with:
+          name: rhamt-report
+          path: .
+      - name: Extract RHAMT Report
+        shell: bash
+        run: tar -xzvf rhamt-report.tgz -C ~
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v1.3.0
+        with:
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

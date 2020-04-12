@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  windup_job:
+    runs-on: ubuntu-latest
+    name: RHAMT
+    steps:
+      - uses: actions/checkout@v2
+      - uses: carlosthe19916/windup-action@v2
+        id: rhamt
+        with:
+          target: 'eap7'
+      - name: Upload report
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ steps.rhamt.outputs.report }}
+          path: ${{ steps.rhamt.outputs.report }}
+

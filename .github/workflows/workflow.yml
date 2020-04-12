@@ -30,15 +30,9 @@ jobs:
       - shell: bash
         run: |
           mkdir -p target/rhamt
-      - shell: bash
-        run: |
-          ls -l
       - name: Extract RHAMT Report
         shell: bash
         run: tar -xzvf rhamt-report.tgz -C target/rhamt #rhamt-report.tgz file name is defined from the GH Action and you can not change it
-      - shell: bash
-        run: |
-          ls -l target/rhamt
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.4.0
         with:

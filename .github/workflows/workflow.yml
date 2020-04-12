@@ -35,7 +35,7 @@ jobs:
           ls -l
       - name: Extract RHAMT Report
         shell: bash
-        run: tar -xzvf rhamt-report.tgz -C build #rhamt-report.tgz file name is defined from the GH Action and you can not change it
+        run: tar -xzvf rhamt-report.tgz -C target/rhamt #rhamt-report.tgz file name is defined from the GH Action and you can not change it
       - shell: bash
         run: |
           ls -l target/rhamt

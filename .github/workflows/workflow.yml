@@ -27,9 +27,12 @@ jobs:
         with:
           name: rhamt-report
           path: .
+      - shell: bash
+        run: |
+          ls -l
       - name: Extract RHAMT Report
         shell: bash
-        run: tar -xzvf rhamt-report.tgz -C build
+        run: tar -xzvf rhamt.tgz -C build
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.4.0
         with:

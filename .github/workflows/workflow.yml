@@ -21,6 +21,7 @@ jobs:
     name: Github Pages
     needs: windup_job
     steps:
+      - uses: actions/checkout@v2
       - name: Download RHAMT Report
         uses: actions/download-artifact@v1
         with:

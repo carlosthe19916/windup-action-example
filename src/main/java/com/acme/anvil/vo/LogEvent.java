@@ -28,3 +28,5 @@ public class LogEvent implements Serializable {
 		this.message = message;
 	}
 }
+
+

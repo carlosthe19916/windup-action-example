@@ -3,40 +3,40 @@ on: [push]
 jobs:
   windup_job:
     runs-on: ubuntu-latest
-    name: RHAMT
+    name: MTA
     steps:
       - uses: actions/checkout@v2
       - uses: carlosthe19916/windup-action@master
-        id: rhamt
+        id: mta
         with:
           target: 'eap7'
           additional-command-line-arguments: '--sourceMode'
-      - name: Upload RHAMT report
+      - name: Upload MTA report
         uses: actions/upload-artifact@v1
         with:
-          name: rhamt-artifacts
-          path: ${{ steps.rhamt.outputs.report }}
+          name: mta-artifacts
+          path: ${{ steps.mta.outputs.report }}
   gp_page_job:
     runs-on: ubuntu-latest
     name: Github Pages
     needs: windup_job
     steps:
       - uses: actions/checkout@v2
-      - name: Download RHAMT Report
+      - name: Download MTA Report
         uses: actions/download-artifact@v1
         with:
-          name: rhamt-artifacts
+          name: mta-artifacts
           path: .
       - shell: bash
         run: |
-          mkdir -p target/rhamt
-      - name: Extract RHAMT Report
+          mkdir -p target/mta
+      - name: Extract MTA Report
         shell: bash
-        run: tar -xzvf rhamt-report.tgz -C target/rhamt #rhamt-report.tgz file name is defined from the GH Action and you can not change it
+        run: tar -xzvf mta-report.tgz -C target/mta #mta-report.tgz file name is defined from the GH Action and you can not change it
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.4.0
         with:
-          build_dir: target/rhamt
+          build_dir: target/mta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

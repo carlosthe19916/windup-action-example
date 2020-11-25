@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <jboss:ejb-jar xmlns:jboss="http://www.jboss.com/xml/ns/javaee"
+               xmlns="http://java.sun.com/xml/ns/javaee"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:s="urn:security:1.1"
+               xmlns:tx="urn:trans-timeout"
+               xmlns:c="urn:clustering:1.0"
+               xmlns:p="urn:ejb-pool:1.0"
+               xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss-ejb3-2_0.xsd http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd
+               urn:trans-timeout http://www.jboss.org/j2ee/schema/trans-timeout-1_0.xsd"
+               version="3.1"
+               impl-version="2.1">
+
+    <enterprise-beans>
+
+        <session>
+            <ejb-name>ProductCatalogBean</ejb-name>
+            <session-type>Stateless</session-type>
+
+        </session>
+        <session>
+            <ejb-name>ItemLookupBean</ejb-name>
+            <session-type>Stateless</session-type>
+
+        </session>
+
+        <message-driven>
+            <ejb-name>LogEventSubscriber</ejb-name>
+            <activation-config>
+               <activation-config-property>
+                  <activation-config-property-name>destination</activation-config-property-name>
+                  <activation-config-property-value>jms/LogEventQueue</activation-config-property-value>
+               </activation-config-property>
+            </activation-config>
+
+        </message-driven>
+    </enterprise-beans>
+
+    <assembly-descriptor>
+            <container-transaction>
+                <method>
+                    <ejb-name>ProductCatalogBean</ejb-name>
+                    <method-name>*</method-name>
+                    <method-intf>Local</method-intf>
+                </method>
+                <tx:trans-timeout>
+                    <tx:timeout>180</tx:timeout>
+                    <tx:unit>Seconds</tx:unit>
+                </tx:trans-timeout>
+            </container-transaction>
+            <container-transaction>
+                <method>
+                    <ejb-name>ItemLookupBean</ejb-name>
+                    <method-name>*</method-name>
+                    <method-intf>Local</method-intf>
+                </method>
+                <tx:trans-timeout>
+                    <tx:timeout>180</tx:timeout>
+                    <tx:unit>Seconds</tx:unit>
+                </tx:trans-timeout>
+            </container-transaction>
+
+    </assembly-descriptor>
+
+
+</jboss:ejb-jar>

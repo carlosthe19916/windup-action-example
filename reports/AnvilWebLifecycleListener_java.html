@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for AnvilWebLifecycleListener.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="82032">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_JEE_Example_EJB_Services.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_JEE_Example_EJB_Services.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_JEE_Example_EJB_Services.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_JEE_Example_EJB_Services.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ejbreport_JEE_Example_EJB_Services.html">
+                        <i class="glyphicon ejb-nav-logo"></i>
+                      EJBs
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_JEE_Example_EJB_Services.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="server_resources_JEE_Example_EJB_Services.html">
+                        <i class="glyphicon server-resource-nav-logo"></i>
+                      Server Resources
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_JEE_Example_EJB_Services.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="82032">
+                            workspace/src/main/java/com/acme/anvil/listener/AnvilWebLifecycleListener.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">16</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Java Source</span>
+                                        <span class="label label-info" title="catchall">catchall</span>
+                                        <span class="label label-info" title="lifecycle">lifecycle</span>
+                                        <span class="label label-info" title="jmx">jmx</span>
+                                        <span class="label label-info" title="configuration">configuration</span>
+                                        <span class="label label-info" title="weblogic">weblogic</span>
+                                        <span class="label label-info" title="jndi">jndi</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package com.acme.anvil.listener;
+
+import java.util.Properties;
+
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import org.apache.log4j.Logger;
+
+import weblogic.application.ApplicationLifecycleEvent;
+import weblogic.application.ApplicationLifecycleListener;
+
+import com.acme.anvil.management.AnvilInvokeBeanImpl;
+
+/**
+ * See more information on registering MBeans in Weblogic at:
+ * 	http://docs.oracle.com/cd/E14571_01/web.1111/e13729/designapp.htm
+ * 
+ * This serves as an example on how to get Application Context information and register MBeans.
+ * 
+ * @author bradsdavis
+ *
+ */
+public class AnvilWebLifecycleListener extends ApplicationLifecycleListener {
+
+	private static Logger LOG = Logger.getLogger(AnvilWebLifecycleListener.class);
+	private static final String MBEAN_NAME = &quot;com.acme:Name=anvil,Type=com.acme.anvil.management.AnvilInvokeBeanApplicationLifecycleListener&quot;;
+	
+	@Override
+	public void preStart(ApplicationLifecycleEvent evt) {
+		String appName = evt.getApplicationContext().getApplicationName();
+		LOG.info(&quot;Before Start Application[&quot;+appName+&quot;]&quot;);
+	}
+	
+	@Override
+	public void postStart(ApplicationLifecycleEvent evt) {
+		String appName = evt.getApplicationContext().getApplicationName();
+		LOG.info(&quot;After Start Application[&quot;+appName+&quot;]&quot;);
+		registerMBean();
+	}
+	
+	@Override
+	public void postStop(ApplicationLifecycleEvent evt) {
+		String appName = evt.getApplicationContext().getApplicationName();
+		LOG.info(&quot;Before Stop Application[&quot;+appName+&quot;]&quot;);
+		unregisterMBean();
+	}
+	
+	@Override
+	public void preStop(ApplicationLifecycleEvent evt) {
+		String appName = evt.getApplicationContext().getApplicationName();
+		LOG.info(&quot;After Stop Application[&quot;+appName+&quot;]&quot;);
+	}
+	
+	private MBeanServer getMBeanServer() throws NamingException {
+		Properties environment = new Properties();
+		environment.put(Context.INITIAL_CONTEXT_FACTORY, &quot;weblogic.jndi.WLInitialContextFactory&quot;);
+		environment.put(Context.PROVIDER_URL, &quot;t3://localhost:7001&quot;);
+		Context context = new InitialContext(environment);
+		
+		//get reference to the MBean Server...
+		MBeanServer server = (MBeanServer) context.lookup(&quot;java:comp/jmx/runtime&quot;);
+		return server;
+	}
+	
+	private void registerMBean() {
+		LOG.info(&quot;Registering MBeans.&quot;);
+		
+		MBeanServer server;
+		try {
+			server = getMBeanServer();
+			server.registerMBean(new AnvilInvokeBeanImpl(), new ObjectName(MBEAN_NAME));
+			LOG.info(&quot;Registered MBean[&quot;+MBEAN_NAME+&quot;]&quot;);
+		} catch (Exception e) {
+			LOG.error(&quot;Exception while registering MBean[&quot;+MBEAN_NAME+&quot;]&quot;);
+		}
+	}
+	
+	private void unregisterMBean() {
+		LOG.info(&quot;Unregistering MBeans.&quot;);
+		
+		MBeanServer server;
+		try {
+			server = getMBeanServer();
+			server.unregisterMBean(new ObjectName(MBEAN_NAME));
+			LOG.info(&quot;Unregistered MBean[&quot;+MBEAN_NAME+&quot;]&quot;);
+		} catch (Exception e) {
+			LOG.error(&quot;Exception while unregistering MBean[&quot;+MBEAN_NAME+&quot;]&quot;);
+		}
+	}
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Sep 14, 2021 3:41:55 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "88,65,75,62,60,18,34,38,47,40,32,52,13,61,18,45,54,14" });
+
+            $("<div id='88-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(88)');
+            $("<div id='65-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(65)');
+            $("<div id='75-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(75)');
+            $("<div id='62-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(62)');
+            $("<div id='60-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(60)');
+            $("<div id='18-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(18)');
+            $("<div id='34-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(34)');
+            $("<div id='38-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(38)');
+            $("<div id='47-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(47)');
+            $("<div id='40-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(40)');
+            $("<div id='32-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(32)');
+            $("<div id='52-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(52)');
+            $("<div id='13-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(13)');
+            $("<div id='61-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(61)');
+            $("<div id='18-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(18)');
+            $("<div id='45-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(45)');
+            $("<div id='54-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(54)');
+            $("<div id='14-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(14)');
+
+
+$("<a name='143576' class='windup-file-location'></a><div class='inline-source-comment green tag-jmx'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>JMX MBean object name (javax.management.ObjectName)</strong><a title='View Rule: environment-dependent-calls-04000' href='windup_ruleproviders.html#environment-dependent-calls-04000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>After migration, some of the JMX beans provided by the previous server may not be present anymore. Ensure that the <code>javax.management.ObjectName<\/code> does not need to change for JBoss EAP.<\/p></div></div></div>").appendTo('#88-inlines');
+
+$("<a name='192704' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Call of JNDI lookup</strong><a title='View Rule: environment-dependent-calls-02000' href='windup_ruleproviders.html#environment-dependent-calls-02000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This method lookups an object using a JNDI String. During the migration process, some entity JNDI bindings may change. Ensure that the JNDI Name does not need to change for JBoss EAP.<\/p><p><em>For Example:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;weblogic.jms.ConnectionFactory&quot;);\n<\/code><\/pre><p><em>should become:<\/em><\/p>\n<pre><code class=\"java\">(ConnectionFactory)initialContext.lookup(&quot;/ConnectionFactory&quot;);\n<\/code><\/pre><ul><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html-single/development_guide/#chap-Remote_JNDI_Lookup' target='_blank'>JBoss EAP 6 - JNDI Reference</a></li><li><a href='https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/6.4/html-single/migration_guide/#sect-JNDI_Changes' target='_blank'>JNDI Changes</a></li></ul></div></div></div>").appendTo('#65-inlines');
+
+$("<a name='204992' class='windup-file-location'></a><div class='inline-source-comment green tag-jmx'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>JMX MBean object name (javax.management.ObjectName)</strong><a title='View Rule: environment-dependent-calls-04000' href='windup_ruleproviders.html#environment-dependent-calls-04000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>After migration, some of the JMX beans provided by the previous server may not be present anymore. Ensure that the <code>javax.management.ObjectName<\/code> does not need to change for JBoss EAP.<\/p></div></div></div>").appendTo('#75-inlines');
+
+$("<a name='221432' class='windup-file-location'></a><div class='inline-source-comment green tag-jndi'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Proprietary InitialContext initialization</strong><a title='View Rule: environment-dependent-calls-03000' href='windup_ruleproviders.html#environment-dependent-calls-03000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>In JBoss EAP, the <code>InitialContext<\/code> should be instantiated with no arguments. Once an instance is constructed, look up the service using portable JNDI lookup syntax. Ensure also that in case system properties for <code>InitialContext<\/code> are provided, they do not need to be changed for the JBoss EAP.<\/p>\n<pre><code class=\"java\">InitialContext context = new InitialContext();\nService service = (Service) context.lookup( &quot;java:app/service/&quot; + ServiceImpl.class.getSimpleName() );\n<\/code><\/pre><ul><li><a href='https://access.redhat.com/articles/1496973' target='_blank'>Migrate Applications From Other Platforms to Use Portable JNDI Syntax in Red Hat JBoss Enterprise Application Platform</a></li></ul></div></div></div>").appendTo('#62-inlines');
+
+$("<a name='229384' class='windup-file-location'></a><div class='inline-source-comment green tag-configuration tag-weblogic'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>WebLogic InitialContextFactory</strong><a title='View Rule: weblogic-eap7-016000' href='windup_ruleproviders.html#weblogic-eap7-016000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p><code>weblogic.jndi.WLInitialContextFactory<\/code> is an implementation of <code>InitialContextFactory<\/code> used to get object instances from JNDI.<\/p><p>The equivalent functionality needs to be configured on JBoss EAP 7 using <code>org.jboss.naming.remote.client.InitialContextFactory<\/code>. Then the context could be instanticated as follows: <code>InitialContext ctx = new InitialContext();<\/code>.<\/p><ul><li><a href='https://access.redhat.com/solutions/161543' target='_blank'>Calling JMS resources and EJB in EAP 6 from Weblogic</a></li><li><a href='https://access.redhat.com/solutions/396853' target='_blank'>How to configure an EJB client in JBoss EAP 6</a></li></ul></div></div></div>").appendTo('#60-inlines');
+
+$("<a name='245768' class='windup-file-location'></a><div class='inline-source-comment green tag-lifecycle tag-weblogic'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>WebLogic ApplicationLifecycleListener</strong><a title='View Rule: weblogic-webapp-eap7-06000' href='windup_ruleproviders.html#weblogic-webapp-eap7-06000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>WebLogic <code>ApplicationLifecycleListener<\/code> must be replaced with standard Java EE <code>ServletContextListener<\/code> types. Otherwise, a solution using CDI\'s <code>ApplicationScoped<\/code> beans or EJB\'s <code>@Startup<\/code> beans is required.<\/p><p>Use a <code>javax.servlet.ServletContextListener<\/code> with <code>@javax.annotation.servlet.WebListener<\/code>, or an EJB 3.1 <code>@javax.ejb.Startup<\/code> <code>@javax.ejb.Singleton<\/code> service bean.<\/p><ul><li><a href='http://docs.oracle.com/cd/E13222_01/wls/docs90/programming/lifecycle.html' target='_blank'>WebLogic custom ApplicationLifecycleEvent Documentation</a></li><li><a href='https://access.redhat.com/articles/1326703' target='_blank'>Migrate Oracle WebLogic Server ApplicationLifecycleListener Code to Red Hat JBoss EAP 6+</a></li><li><a href='http://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextEvent.html' target='_blank'>Java EE ServletContextEvent JavaDoc</a></li></ul></div></div></div>").appendTo('#18-inlines');
+
+$("<a name='249944' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent.getApplicationContext()<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#34-inlines');
+
+$("<a name='258136' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#38-inlines');
+
+$("<a name='262232' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent.getApplicationContext()<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#47-inlines');
+
+$("<a name='262256' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent.getApplicationContext()<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#40-inlines');
+
+$("<a name='307448' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#32-inlines');
+
+$("<a name='311544' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#52-inlines');
+
+$("<a name='352408' class='windup-file-location'></a><div class='inline-source-comment green tag-lifecycle tag-weblogic'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>WebLogic ApplicationLifecycleEvent</strong><a title='View Rule: weblogic-webapp-eap7-05000' href='windup_ruleproviders.html#weblogic-webapp-eap7-05000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>WebLogic <code>ApplicationLifecycleEvent<\/code> must be replaced with standard Java EE <code>ServletContextEvent<\/code>. Otherwise, a custom solution using CDI\'s <code>ApplicationScoped<\/code> beans or EJB\'s <code>@Startup<\/code> beans is required in order to propagate a custom event object because <code>ServletContextEvent<\/code> types are not extendible in the standard Java EE programming model.<\/p><p>Use a <code>javax.servlet.ServletContextListener<\/code> with <code>@javax.annotation.servlet.WebListener<\/code>, or an EJB 3.1 <code>@javax.ejb.Startup<\/code> <code>@javax.ejb.Singleton<\/code> service bean.<\/p><ul><li><a href='https://access.redhat.com/articles/1326703' target='_blank'>Migrate WebLogic ApplicationLifecycleEvent to standard EJB with JBoss EAP</a></li><li><a href='http://docs.oracle.com/cd/E13222_01/wls/docs90/programming/lifecycle.html' target='_blank'>WebLogic custom ApplicationLifecycleEvent Documentation</a></li><li><a href='http://docs.oracle.com/javaee/7/api/javax/servlet/ServletContextEvent.html' target='_blank'>Java EE ServletContextEvent JavaDoc</a></li></ul></div></div></div>").appendTo('#13-inlines');
+
+$("<a name='499832' class='windup-file-location'></a><div class='inline-source-comment green tag-configuration tag-weblogic'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>WebLogic T3 JNDI binding</strong><a title='View Rule: weblogic-eap7-017000' href='windup_ruleproviders.html#weblogic-eap7-017000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Weblogic?s implementation of the RMI specification uses a proprietary protocol known as T3. T3S is the version of the protocol over SSL.  <code>t3://<\/code> and <code>t3s://<\/code> URLs are used to configure a JNDI InitialContext within WebLogic.<\/p><p>The equivalent functionality needs to be configured in JBoss EAP 7. This could be done either by using standard Java EE JNDI names or by using a WebLogic proprietary library if the connectivity to WebLogic server is still required.<\/p><ul><li><a href='https://docs.oracle.com/cd/E24329_01/web.1211/e24389/rmi_t3.htm#WLRMI143' target='_blank'>Oracle WebLogic RMI with T3</a></li><li><a href='https://access.redhat.com/solutions/1230143' target='_blank'>Invoking EJBs deployed on WebLogic from EAP6</a></li></ul></div></div></div>").appendTo('#61-inlines');
+
+$("<a name='548984' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleListener<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#18-inlines');
+
+$("<a name='553080' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#45-inlines');
+
+$("<a name='561272' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleEvent.getApplicationContext()<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#54-inlines');
+
+$("<a name='569464' class='windup-file-location'></a><div class='inline-source-comment green tag-catchall'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification info'>WebLogic proprietary type reference</strong><a title='View Rule: weblogic-catchall-01000' href='windup_ruleproviders.html#weblogic-catchall-01000'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>This is a WebLogic proprietary type (<code>weblogic.application.ApplicationLifecycleListener<\/code>) and needs to be migrated to a compatible API. There is currently no detailed information about this type.<\/p></div></div></div>").appendTo('#14-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 82032;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>
